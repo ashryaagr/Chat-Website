@@ -2,7 +2,7 @@
 {% block body %}
 <p>
     <h4>Please enter the required details</h4>
-    <form>
+    <form action="{{url_for('account_creation')}}">
             <div class="form-group">
               <label for="InputEmail">Email address</label>
               <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -16,7 +16,8 @@
                 <label for="InputDisplayName">Display Name</label>
                 <input type="text" class="form-control" id="InputDisplayName" placeholder="Enter Display Name">
             </div>
-            <button type="submit" class="btn btn-primary" onclick="location.href='/account_creation'" >Sign Up</button>
+
+          <center><button type="submit" class="btn btn-primary" >Sign Up</button></center>
           </form>
 </p>
 {% endblock %}

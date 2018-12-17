@@ -1,4 +1,4 @@
-Project 2
+Online Messaging Service
 -----------------------------------------------------------------------------------------------------------------------------
 It is a online messaging service similar to Slack .
 

@@ -9,11 +9,11 @@ app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 socketio = SocketIO(app)
 
 db = SQLAlchemy(app)
-""" class user(db.Model) :
+class user(db.Model) :
     __table__="user"
     display_name = db.column(db.String)
     password = db.column(db.String)
-    email = db.column(db.String) """
+    email = db.column(db.String)
 
 @app.route("/")
 def index():
@@ -25,14 +25,14 @@ def sign_up():
 
 @app.route("/login")
 def login() :
-    return login.html
+    return render_template("login.html")
 
 @app.route("/account_creation", methods=["POST"])
 def account_creation():
     name = request.form.get("InputDisplayName")
     email = request.form.get("InputEmail1")
     password = request.form.get("InputPassword1")
-    if email in :
+    if email in db.email:
         messsage = "Sorry the Email already exists in our DATABASE. Please try with some other Email"
         return render_template("account_creation.html", message=message)
     else :
